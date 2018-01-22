@@ -1,0 +1,31 @@
+@import "bootstrap"; 
+@import "fonts";
+@import "vars"; 
+@import "buttons";
+@import "form";   
+@import "modal";  
+@import "menu";  
+@import "hacks"; 
+@import "slick"; 
+@import "hamburgers"; 
+
+
+
+body{
+	// font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	// color: $c-bck;
+	line-height: 1.5;
+	background-color: #fff;
+	opacity: 0;
+	transition: opacity .3s linear;
+	&.loaded{
+		opacity: 1;
+	}
+}  
+
+
+
+
+@import "media";

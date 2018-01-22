@@ -1,0 +1,162 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arr1 {
+  background-image: url(../img/sprite.png);
+  background-position: -146px -119px;
+  width: 8px;
+  height: 5px;
+}
+.icon-auction-h {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -48px;
+  width: 24px;
+  height: 24px;
+}
+.icon-auction {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -72px;
+  width: 24px;
+  height: 24px;
+}
+.icon-currency-h {
+  background-image: url(../img/sprite.png);
+  background-position: -146px -47px;
+  width: 20px;
+  height: 24px;
+}
+.icon-currency {
+  background-image: url(../img/sprite.png);
+  background-position: -146px -23px;
+  width: 20px;
+  height: 24px;
+}
+.icon-dozer-h {
+  background-image: url(../img/sprite.png);
+  background-position: -74px -67px;
+  width: 24px;
+  height: 24px;
+}
+.icon-dozer {
+  background-image: url(../img/sprite.png);
+  background-position: -98px -67px;
+  width: 24px;
+  height: 24px;
+}
+.icon-earth-globe-h {
+  background-image: url(../img/sprite.png);
+  background-position: -122px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-earth-globe {
+  background-image: url(../img/sprite.png);
+  background-position: -122px -24px;
+  width: 24px;
+  height: 24px;
+}
+.icon-fb-sm {
+  background-image: url(../img/sprite.png);
+  background-position: -146px 0px;
+  width: 23px;
+  height: 23px;
+}
+.icon-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -37px -67px;
+  width: 37px;
+  height: 37px;
+}
+.icon-map {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 85px;
+  height: 67px;
+}
+.icon-note-h {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -104px;
+  width: 24px;
+  height: 24px;
+}
+.icon-note {
+  background-image: url(../img/sprite.png);
+  background-position: -85px -37px;
+  width: 24px;
+  height: 24px;
+}
+.icon-placeholder-h {
+  background-image: url(../img/sprite.png);
+  background-position: -146px -95px;
+  width: 19px;
+  height: 24px;
+}
+.icon-placeholder {
+  background-image: url(../img/sprite.png);
+  background-position: -146px -71px;
+  width: 19px;
+  height: 24px;
+}
+.icon-search {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -128px;
+  width: 16px;
+  height: 17px;
+}
+.icon-star-h {
+  background-image: url(../img/sprite.png);
+  background-position: -48px -104px;
+  width: 24px;
+  height: 23px;
+}
+.icon-star {
+  background-image: url(../img/sprite.png);
+  background-position: -24px -104px;
+  width: 24px;
+  height: 23px;
+}
+.icon-tw-sm {
+  background-image: url(../img/sprite.png);
+  background-position: -118px -104px;
+  width: 23px;
+  height: 23px;
+}
+.icon-tw {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -67px;
+  width: 37px;
+  height: 37px;
+}
+.icon-warn {
+  background-image: url(../img/sprite.png);
+  background-position: -95px -104px;
+  width: 23px;
+  height: 23px;
+}
+.icon-yout-sm {
+  background-image: url(../img/sprite.png);
+  background-position: -72px -104px;
+  width: 23px;
+  height: 23px;
+}
+.icon-yout {
+  background-image: url(../img/sprite.png);
+  background-position: -85px 0px;
+  width: 37px;
+  height: 37px;
+}
