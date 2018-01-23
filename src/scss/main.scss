@@ -26,6 +26,22 @@ body{
 }  
 
 .head{
+	&__itt{
+		p{
+			position: relative;
+			padding-left: 30px;
+			.icon{
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		&-2{
+			// padding-left: 30px;
+		}
+	}
 	&__wrr{
 		display: flex;
 		flex-wrap: wrap;
@@ -53,6 +69,79 @@ body{
 				color: $c-bl;
 			}
 		}
+	}
+}
+
+.jum{
+	position: relative;
+	&__sliddr{
+		&-dots{
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			text-align: center;
+			li{	
+				display: inline-block;
+				margin: 10px;
+				font-size: 0;
+				padding: 4px;
+				background-color: $c-wh;
+				border-radius: 50%;
+				&.slick-active{
+					button{
+						background-color: $c-bl;
+					}
+				}
+			}
+			button{
+				width: 8px;
+				height: 8px;
+				border: none;
+				border-radius: 50%;
+				background-color: $c-wh;
+			}
+		}
+		&-itt{
+			min-height: 439px;
+		}
+	}
+	.container{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&__titl{
+		font-size: 22px;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	&__wrr{
+		padding-top: 50px;
+		padding-bottom: 30px;
+		&-2{
+			min-height: 439px;
+			position: relative;
+		}
+	}
+}//.jum
+
+.featt{
+	&__wrr{
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	&__img{
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+	&__title{
+		font-size: 17px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
 	}
 }
 

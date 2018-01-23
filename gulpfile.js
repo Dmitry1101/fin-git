@@ -69,6 +69,7 @@ gulp.task('js', function () {
     .pipe(plumber())
     .pipe(order([
       "jquery-3.2.1.js",
+      "slick.js",
       "main.js"
     ]))
     .pipe(concat('all.js'))
