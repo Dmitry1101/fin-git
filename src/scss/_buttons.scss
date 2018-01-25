@@ -5,6 +5,7 @@
 	padding: 13px 25px;
 	border-radius: 5px;
 	text-align: center;
-	// width: 100%;
-	// max-width: 10px;
+	&:hover{
+		background-color: darken( $c-bl, 10 );
+	}
 }
