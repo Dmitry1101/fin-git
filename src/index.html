@@ -4,10 +4,27 @@
 		<meta charset="UTF-8">
 		<title>Document</title>
 		
-		<link rel="stylesheet" href="css/sprite.css">
-		<link rel="stylesheet" href="css/main.css">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script>
+			
+			function setup( file ){
+				// if( window.location.hostname.indexOf("v.cf") !== -1 ) {
+				if( window.location.hostname.indexOf("loc") !== -1 ) {
+
+			    var link = document.createElement('link');
+			    link.rel = 'stylesheet';
+			    link.href = 'css/' + file + '.css';
+			    document.head.appendChild(link);
+				}	
+			}
+
+			var arr = ['sprite','main']; 
+
+			setup( arr[0] );
+			setup( arr[1] );
+
+		</script>
 	</head>
 	<body>
 		
@@ -93,7 +110,52 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div class="jum__wrr-1 jum__wrr">
-						<img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">			
+						
+						<div class="jum__calc-wrr">
+							<form action="" class="jum__calc-form">
+								
+								<div class="jum__calc-sel">
+									<button>Ипотека</button>
+									<button>Потребительский</button>
+									<button>Под залог ПТС</button>
+									<button>Для бизнеса</button>
+									<button>Автокредит БН</button>
+									<button class="acct">Под залог недвиж-ти</button>
+								</div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="summ">СУММА КРЕДИТА (РУБ.)</label>
+								  <input class="jum__calc-inp" type="text" id="summ" readonly >
+								</div>
+								  								 
+								<div class="jum__calc-sliddr" id="slider_summ"></div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="srok">СРОК КРЕДИТА (ЛЕТ)</label>
+								  <input class="jum__calc-inp" type="text" id="srok" readonly >
+								</div>
+								  								 
+								<div class="jum__calc-sliddr" id="slider_srok"></div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="proc">ПРОЦЕНТНАЯ СТАВКА:</label>
+								  <input class="jum__calc-inp" data-default="12" type="text" id="proc" readonly >
+								</div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="platej">ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ:</label>
+								  <input class="jum__calc-inp" type="text" id="platej" readonly >
+								</div>
+								
+								<div class="txt-cent">
+									<button class="to-mod butt jum__calc-butt">ОТПРАВИТЬ ЗАЯВКУ</button>	
+								</div>
+
+							</form>
+						</div>
+
+						
+
 					</div>
 				</div>
 				<div class="col-md-8">
@@ -541,8 +603,33 @@
 						оставьте заявку:
 					</div>
 					<div class="knoww__wrapp">
-						<form action="" class="kd89-form">
-							
+						<form action="" class="knoww__blck kd89-form">
+							<div class="knoww__blck-fx">
+								<div class="knoww__blck-it">
+									<input type="checkbox" name="" id="k1">
+									<label for="k1"><span></span> Ипотека</label>	
+								</div>
+
+								<div class="knoww__blck-it">
+									
+								</div>
+
+								<div class="knoww__blck-it">
+									
+								</div>
+
+								<div class="knoww__blck-it">
+									
+								</div>
+
+								<div class="knoww__blck-it">
+									
+								</div>
+
+								<div class="knoww__blck-it">
+									
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -567,22 +654,92 @@
 		</div>
 	</div>
 	
-	<div class="footer-2">
+	<div class="footer-2 s">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<div class="footer-2__wrr footer-2__wrr-1">
+					<div class="footer-2__wrr footer-2__wrr-1 clearfix">
 						
+						<div class="footer-2__blck footer-2__blck-1">
+							
+							<div class="head__itt footer-2__itt">
+								<p>
+									<i class="icon icon-head5"></i> 
+									<a href="tel:(8652) 20-50-50">(8652) 
+									<strong>20-50-50</strong></a>
+								</p>
+							</div>
+
+							<div class="head__itt footer-2__itt">
+								<p><i class="icon icon-head1"></i> пн.-пт. 10:00 - 19:00</p>
+								<p>сб. 10:00 - 14:00</p>	
+							</div>
+
+						</div>
+
+
+						<div class="footer-2__blck footer-2__blck-2">
+							
+							<div class="head__itt footer-2__itt">
+								<p><i class="icon icon-head3"></i> <a href="mailto:info@sale-credit.ru">info@sale-credit.ru</a></p>
+							</div>
+
+							<div class="head__itt footer-2__itt">
+								<p><i class="icon icon-head2"></i> <a href="#">Ставрополь, ул. Ленина, 219, оф. 604</a></p>
+							</div>
+
+						</div>
+
+
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div class="footer-2__wrr footer-2__wrr-1">
+					<div class="footer-2__wrr footer-2__wrr-2">
+						
+						<ul class="footer-2__soc">
+							<li>
+								<a href="#">
+									<i class="icon icon-vk"></i>
+									<i class="icon icon-vk-h"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon icon-fb"></i>
+									<i class="icon icon-fb-h"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon icon-ok"></i>
+									<i class="icon icon-ok-h"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon icon-insta"></i>
+									<i class="icon icon-insta-h"></i>
+								</a>
+							</li>
+						</ul>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	
+	<div class="copyr">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="copyr__wrr">
+						 © 2017  Финансовые Решения | Все права защищены
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="imgg__overr">
 		<div class="imgg__overr-wrr">
@@ -591,29 +748,6 @@
 		</div>
 	</div>	
 	
-
-
-	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam eaque, eius explicabo aut, voluptas consectetur tenetur quod vero asperiores, tempore, facilis hic. Aut asperiores odit earum cumque quas voluptas repellendus.</div>
-	<div>Nihil odit nobis incidunt esse. Nobis, asperiores enim voluptate ex? A corporis tenetur consequatur eum nobis ipsum accusamus reprehenderit, similique pariatur cum dolor, consectetur animi laborum, ad sequi rerum? Atque.</div>
-	<div>Ex cupiditate quisquam vel eos ratione esse corporis est non! Aspernatur nulla, laborum ex amet assumenda maxime unde quaerat inventore, vel optio, dolorum enim autem expedita culpa. Dicta, sed, fugit!</div>
-	<div>Voluptatibus natus dolorum blanditiis, numquam impedit, vero commodi eligendi repellendus iste aliquid ratione animi! Delectus rem dolores in minus incidunt itaque repellat accusamus, non error ratione at. Perspiciatis, nesciunt optio!</div>
-	<div>A quis facere id beatae at. In consequuntur vero autem asperiores, veniam omnis et laudantium tenetur quasi perspiciatis distinctio reiciendis quis id voluptatibus voluptatum totam ducimus dolore, dolorem minus eligendi.</div>
-	<div>Unde cumque ducimus illo repellat voluptas esse, veniam voluptatum ratione sequi dicta commodi, tenetur in, enim at delectus quae cum incidunt tempora assumenda. Autem incidunt, distinctio odio tenetur facere quasi!</div>
-	<div>Labore illum et repellendus blanditiis, consequuntur sequi autem quo nobis nostrum. Consequatur, animi, ea. Quo voluptatem, obcaecati fuga suscipit officiis accusantium praesentium eos, recusandae aliquam et illo dicta velit! Cupiditate?</div>
-	<div>Quae minima maiores molestias iusto aut, sit, sequi nisi veniam dolore suscipit alias quaerat quidem? Ipsam fugiat eos labore doloribus aut dolorem eum commodi, accusantium dolor incidunt nostrum, quod ut.</div>
-	<div>Eos nulla, eaque distinctio vel odio, eligendi beatae non delectus, maiores architecto optio quis ab, totam cupiditate. Eaque dolore illum, cumque fugiat assumenda consectetur tenetur cupiditate minus vero tempore sunt.</div>
-	<div>Facere laboriosam doloribus totam quisquam, quam, nihil laborum similique, ab modi inventore natus id eveniet magni sapiente error sunt neque ullam molestiae repellendus sed explicabo. Ipsa explicabo, reiciendis libero repellat.</div>
-	<div>Atque repellat quo, ducimus alias consectetur, veniam nam quis obcaecati in dolor, ut corrupti velit similique, aut facere? Necessitatibus ex nobis veniam culpa laboriosam, consectetur quisquam dolor accusamus, mollitia praesentium?</div>
-	<div>Dolorem, dolore nostrum. Consequuntur quibusdam repudiandae, maxime, natus est amet voluptatibus pariatur vero repellendus sed, ab itaque illum necessitatibus perspiciatis. Vero explicabo dignissimos, facilis. Iusto, aut. Magni, dolor in ut.</div>
-	<div>Dolorem sit autem vel quam quisquam fuga molestias, error laudantium. Praesentium tenetur sequi quam esse sit, ducimus, impedit dolore eveniet illo sunt suscipit expedita maiores optio incidunt asperiores, sint eligendi.</div>
-	<div>Id inventore non aliquam fuga dicta quis hic reiciendis reprehenderit quas, ullam quos a nesciunt repellendus. Ut, doloribus doloremque. Exercitationem minus eum iusto, ducimus modi dolorum adipisci eos praesentium necessitatibus.</div>
-	<div>Dolores minima animi qui perferendis explicabo adipisci. Veritatis neque repellat dolore illo, commodi deleniti. Possimus, laboriosam, doloribus? Commodi, laborum, quis? Sint corporis repudiandae nemo, temporibus est omnis voluptatibus distinctio praesentium.</div>
-	<div>Quaerat impedit adipisci, incidunt molestias eos, expedita aliquid qui sunt. Impedit pariatur sint incidunt, blanditiis exercitationem. Aliquam totam possimus quae unde recusandae animi, nobis doloremque, porro dolor, dolore architecto ducimus.</div>
-	<div>Officia voluptates consequuntur, sunt deserunt, pariatur mollitia inventore neque. Molestias, eius, provident. Hic architecto, mollitia tempora numquam magnam accusamus, dolore recusandae repellat eum sint sed nam deserunt reprehenderit delectus nulla.</div>
-	<div>Ducimus doloremque delectus nam, dicta temporibus a vero voluptatem culpa iste, quisquam qui sequi, soluta. Quod modi at, necessitatibus pariatur molestias itaque, enim, repellendus alias laborum quisquam unde? Repellendus, explicabo!</div>
-	<div>Mollitia reiciendis optio facilis blanditiis provident suscipit similique ipsam sit aspernatur fuga nulla, rerum nesciunt enim repudiandae! Porro, sequi odit quis, minus iusto est, cumque error explicabo perspiciatis voluptas repellendus.</div>
-	<div>Voluptatibus deserunt officia laborum nisi sapiente dolorem sit quae iste corporis tempora eos, excepturi modi consequatur molestiae assumenda sint delectus vel expedita, quidem optio dignissimos hic. Rerum natus architecto ea.</div>
-
 
 
 	<script src="js/all.js"></script>

@@ -8,6 +8,7 @@
 @import "hacks"; 
 @import "slick"; 
 @import "hamburgers"; 
+@import "jquery-ui"; 
 
 
 
@@ -21,6 +22,7 @@ body{
 	opacity: 0;
 	transition: opacity .3s linear;
 	position: relative;
+	color: $c-bck;
 	&.loaded{
 		opacity: 1;
 	}
@@ -57,6 +59,21 @@ body{
 
 		&-2{
 			// padding-left: 30px;
+		}
+		&-3{
+			p{
+				&:last-child{
+					a{
+						color: $c-bck;
+					}							
+				}
+			}
+
+		}
+		&-4{
+			a{
+				color: $c-bck;
+			}
 		}
 	}
 	&__wrr{
@@ -144,9 +161,64 @@ body{
 			position: relative;
 		}
 	}
+	&__calc{
+		&-wrr{
+			background-color: #F2F6F8;
+			border-radius: 4px;
+			padding: 6px;
+		}
+		&-form{
+			padding: 15px 10px;
+			border: 1px solid #D3DDE1;
+			font-size: 14px;
+		}
+		&-sel{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			button{
+				background-color: transparent;
+				border-radius: 4px;
+				border: 1px solid #B3B3B3;
+				flex-basis: 48.5%;
+				margin-bottom: 15px;
+				height: 40px;
+				
+			}
+			.acct{
+				background-color: $c-yw;
+				border: 1px solid $c-yw;
+				
+			}
+		}
+		&-blck{
+			margin-bottom: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&-inp{
+			max-width: 80px;
+			display: block;
+			width: 100%;
+			text-align: center;
+			height: 33px;
+		}
+		&-label{
+			display: block;
+		}
+		&-sliddr{
+			margin-bottom: 15px;
+		}
+		&-butt{
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
+	}
 }//.jum
 
 .featt{
+	padding-top: 120px;
 	&__wrr{
 		text-align: center;
 		margin-bottom: 50px;
@@ -346,6 +418,80 @@ body{
 	&__wrr{
 		text-align: center;
 	}
+}
+
+
+
+.footer-2{
+
+	&__blck{
+		float: left;
+		&-1{
+			margin-right: 50px;
+			.head__itt{
+				&:first-child{
+					margin-bottom: 25px;
+				}
+			}
+		}
+		&-2{
+			.head__itt{
+				&:first-child{
+					margin-bottom: 25px;
+				}
+			}	
+		}
+	}
+	a{
+		color: $c-bck;
+	}
+
+	&__soc{
+		list-style-type: none;
+		text-align: right;
+		margin-top: 15px;
+		li{
+			display: inline-block;
+			margin-left: 20px;
+		}
+		i{
+			&:last-child{
+				display: none;
+			}
+		}
+		a{
+			&:hover{
+				i{
+					display: none;
+					&:last-child{
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+.copyr{
+	text-align: center;
+	font-size: 10px;
+	margin-bottom: 40px;
+}
+
+.ui-widget-header{
+	background-color: $c-yw;
+}
+.ui-widget-content{
+	background-color: #B3B3B3;
+}
+
+.ui-state-default{
+	background: transparent url('../img/handdl.png') center no-repeat !important;
+	width: 25px	!important;
+	height: 25px	!important;
+	border: none !important;
+	cursor: pointer !important;
+	top: -7px !important;
 }
 
 

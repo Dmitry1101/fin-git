@@ -18,39 +18,75 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-control-next {
   background-image: url(../img/sprite.png);
-  background-position: -36px -39px;
+  background-position: -76px -21px;
   width: 12px;
   height: 34px;
 }
 .icon-control {
   background-image: url(../img/sprite.png);
-  background-position: -48px -39px;
+  background-position: -97px 0px;
   width: 12px;
   height: 34px;
 }
+.icon-fb-h {
+  background-image: url(../img/sprite.png);
+  background-position: -97px -34px;
+  width: 12px;
+  height: 25px;
+}
+.icon-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -109px -48px;
+  width: 12px;
+  height: 25px;
+}
 .icon-head1 {
   background-image: url(../img/sprite.png);
-  background-position: -76px -19px;
+  background-position: -57px -39px;
   width: 17px;
   height: 17px;
 }
 .icon-head2 {
   background-image: url(../img/sprite.png);
-  background-position: -76px -36px;
+  background-position: -109px -73px;
   width: 14px;
   height: 20px;
 }
 .icon-head3 {
   background-image: url(../img/sprite.png);
-  background-position: -76px -56px;
+  background-position: -26px -79px;
   width: 19px;
   height: 12px;
 }
 .icon-head5 {
   background-image: url(../img/sprite.png);
-  background-position: -76px 0px;
+  background-position: -76px -55px;
   width: 19px;
   height: 19px;
+}
+.icon-insta-h {
+  background-image: url(../img/sprite.png);
+  background-position: -36px -39px;
+  width: 21px;
+  height: 21px;
+}
+.icon-insta {
+  background-image: url(../img/sprite.png);
+  background-position: -76px 0px;
+  width: 21px;
+  height: 21px;
+}
+.icon-ok-h {
+  background-image: url(../img/sprite.png);
+  background-position: -109px 0px;
+  width: 15px;
+  height: 24px;
+}
+.icon-ok {
+  background-image: url(../img/sprite.png);
+  background-position: -109px -24px;
+  width: 15px;
+  height: 24px;
 }
 .icon-step-1 {
   background-image: url(../img/sprite.png);
@@ -69,4 +105,16 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: 0px 0px;
   width: 38px;
   height: 39px;
+}
+.icon-vk-h {
+  background-image: url(../img/sprite.png);
+  background-position: -36px -60px;
+  width: 26px;
+  height: 15px;
+}
+.icon-vk {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -79px;
+  width: 26px;
+  height: 15px;
 }

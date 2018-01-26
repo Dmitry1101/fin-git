@@ -10,9 +10,100 @@ $(document).ready(function(){
     $hh: $('.head').height(),
 
 
-		setupVars: function(){
+		calc: function(){
 
-		},
+      var $proc = $('#proc');
+
+      $proc.val( $proc.attr('data-default') );
+
+
+
+
+
+
+        
+      $( "#slider_summ" ).slider({
+        range: "min",
+        value: 500000,
+        min: 20000,
+        max: 1000000,
+        step: 10000,
+        slide: function( event, ui ) {
+
+          $( "#summ" ).val( ui.value );
+
+          var srok, platej, procent;
+
+          srok = $('#srok').val();
+          srok = srok * 12;
+
+          platej = ui.value / srok;  
+
+          procent = $('#proc').val();
+
+          platej = platej + ( platej / 100 * procent );         
+
+          $('#platej').val( Math.round( platej )  );
+        
+        }
+      });
+
+      $( "#summ" ).val( $( "#slider_summ" ).slider( "value" ) );
+
+
+
+
+      $( "#slider_srok" ).slider({
+        range: "min",
+        value: 10,
+        min: 1,
+        max: 30,
+        step: 1,
+        slide: function( event, ui ) {
+          
+          $( "#srok" ).val( ui.value );
+
+          var srok, platej, procent;
+
+          srok = $('#srok').val();
+          srok = srok * 12;
+
+          platej = $('#summ').val() / srok;  
+
+          procent = $('#proc').val();
+
+          platej = platej + ( platej / 100 * procent );         
+
+          $('#platej').val( Math.round( platej )  );
+
+        }
+      });
+
+      $( "#srok" ).val( $( "#slider_srok" ).slider( "value" ) );
+
+
+
+
+      ( function(){
+
+          var srok, platej, procent;
+
+          srok = $('#srok').val();
+          srok = srok * 12;
+
+          platej = $('#summ').val() / srok;  
+
+          procent = $('#proc').val();
+
+          platej = platej + ( platej / 100 * procent );         
+          
+
+          $('#platej').val( Math.round( platej )  );        
+
+      } )();
+
+
+  	},
 
 
     AddEvents: function(){
@@ -48,22 +139,19 @@ $(document).ready(function(){
 
       $(window).scroll(function(){
 
-        console.log( this.$hh );
 
+            
         if( $(window).scrollTop() > 100 ){
           var $hh = $( '.head' );
-          
           $('body').css('paddingTop', $hh.attr( 'data-height' ) + 'px');
-
           $( '.head' ).addClass('active');
-          
         }
         else{
           $( '.head' ).removeClass('active');
           $('body').css('paddingTop', '0px');
-
         }
 
+      
       });
 
 
@@ -113,14 +201,22 @@ $(document).ready(function(){
     // INITIALIZED
     init: function(){
 
-      this.setupVars();
-      this.loaDed();
-      this.AddEvents();
+      // var locHost = window.location.hostname.indexOf("v.cf");      
+      var locHost = window.location.hostname.indexOf("loc");      
+      
+      if( locHost !== -1 ){
+        this.calc();
+        this.loaDed();
+        this.AddEvents();
+      }
 
-    }
+    } 
 
   };
   
+
+
+
   Alll.init(); 
 
 });
