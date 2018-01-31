@@ -1,0 +1,113 @@
+@@include('parts/header.html')
+	
+
+	<div class="nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="nav__wrr">
+						<ul class="nav__menu">
+							<li><a href="#">Кредит</a></li>
+							<li><a href="#">Ипотека</a></li>
+							<li><a href="#">Автокредит</a></li>
+							<li><a class="acct" href="#">Под залог</a></li>
+							<li><a href="#">Бизнесу</a></li>
+							<li><a href="#">Рефинансирование </a></li>
+							<li><a href="#">Страхование</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- .nav -->	
+		
+	
+	<div class="jum">
+
+		<div class="jum__sliddr sliddr">
+			<div class="jum__sliddr-itt" style="background: url('../img/jum5.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;"></div>
+			<div class="jum__sliddr-itt" style="background: url('../img/jum5.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;"></div>
+			<div class="jum__sliddr-itt" style="background: url('../img/jum5.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;"></div>
+			<div class="jum__sliddr-itt" style="background: url('../img/jum5.jpg') center no-repeat; -webkit-background-size: cover; background-size: cover;"></div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="jum__wrr-1 jum__wrr">
+						
+						<div class="jum__calc-wrr">
+							<form action="" class="jum__calc-form">
+								
+								<div class="jum__calc-sel">
+									<button>Ипотека</button>
+									<button>Потребительский</button>
+									<button>Под залог ПТС</button>
+									<button>Для бизнеса</button>
+									<button>Автокредит БН</button>
+									<button class="acct">Под залог недвиж-ти</button>
+								</div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="summ">СУММА КРЕДИТА (РУБ.)</label>
+								  <input class="jum__calc-inp" type="text" id="summ" readonly >
+								</div>
+								  								 
+								<div class="jum__calc-sliddr" id="slider_summ"></div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="srok">СРОК КРЕДИТА (ЛЕТ)</label>
+								  <input class="jum__calc-inp" type="text" id="srok" readonly >
+								</div>
+								  								 
+								<div class="jum__calc-sliddr" id="slider_srok"></div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="proc">ПРОЦЕНТНАЯ СТАВКА:</label>
+								  <input class="jum__calc-inp" data-default="12" type="text" id="proc" readonly >
+								</div>
+
+								<div class="jum__calc-blck">
+									<label class="jum__calc-label" for="platej">ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ:</label>
+								  <input class="jum__calc-inp" type="text" id="platej" readonly >
+								</div>
+								
+								<div class="txt-cent">
+									<button class="to-mod butt jum__calc-butt">ОТПРАВИТЬ ЗАЯВКУ</button>	
+								</div>
+
+							</form>
+						</div>
+
+						
+
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="jum__wrr-2 jum__wrr">
+						<div class="jum__titl">
+							кредит наличными с любой кредитной <br>
+							историей под залог недвижимости
+						</div>
+						<button class="to-mod butt">ОФОРМИТЬ</button>
+						
+
+						
+
+						<div class="jum__sliddr-dots"></div>
+
+					</div>				
+					
+				</div>
+			</div>
+		</div>
+		
+
+	
+	</div><!-- .jum -->
+	
+	
+	@@include('parts/content.html')
+	
+
+@@include('parts/footer.html')

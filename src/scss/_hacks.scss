@@ -62,6 +62,18 @@ b{
 		// text-transform: uppercase;
 		// line-height: 0.8;
 		text-align: center;
+		// visibility: hidden;
+		// opacity: 0;
+		// transition: all 2s ease;
+		// transform: translateY(200px);
+		// display: none;
+		// animation-name: showTitle;
+  //   animation-duration: 2s;
+		&.active{
+			opacity: 1;
+			transform: translateY(0px);
+			visibility: visible;
+		}
 	}
 	&-descr{
 		font-size: 24px;

@@ -1,0 +1,29 @@
+label{
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+input[type="checkbox"] + label{
+	span{
+		display: inline-block;
+		width: 21px;
+		height: 21px;
+		background: url('../img/check1.png') center no-repeat;
+		vertical-align: middle;
+		margin-right: 7px;
+		float: left;
+		margin-bottom: 10px;
+	}
+}
+
+input[type="checkbox"]:checked + label{
+	span{
+		background: url('../img/check2.png') center no-repeat;
+	}
+}
+
+
