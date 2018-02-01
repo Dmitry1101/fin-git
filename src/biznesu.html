@@ -20,7 +20,8 @@
 			</div>
 		</div>
 	</div><!-- .nav -->	
-		
+	
+@@include('parts/submenu.html')		
 	
 	<div class="jum">
 
@@ -41,12 +42,19 @@
 							<form action="" class="jum__calc-form">
 								
 								<div class="jum__calc-sel">
-									<button>Ипотека</button>
+									<a href="ipoteka.html" class="button">Ипотека</a>
+									<a href="potrebitelskiy.html" class="button">Потребительский</a>
+									<a href="pts.html" class="button">Под залог ПТС</a>
+									<a href="#" class="button acct">Для бизнеса</a>
+									<a href="avtokredit.html" class="button">Автокредит Б/У</a>
+									<a href="podzalog.html" class="button">Под залог недвиж-ти</a>
+
+									<!-- <button>Ипотека</button>
 									<button>Потребительский</button>
 									<button>Под залог ПТС</button>
 									<button class="acct">Для бизнеса</button>
 									<button>Автокредит Б/У</button>
-									<button>Под залог недвиж-ти</button>
+									<button>Под залог недвиж-ти</button> -->
 								</div>
 
 								<div class="jum__calc-blck">
@@ -74,7 +82,7 @@
 								</div>
 								
 								<div class="txt-cent">
-									<button class="to-mod butt jum__calc-butt">ОТПРАВИТЬ ЗАЯВКУ</button>	
+									<button class="to-mod butt jum__calc-butt" data-targg=".modd-2">ОТПРАВИТЬ ЗАЯВКУ</button>		
 								</div>
 
 							</form>

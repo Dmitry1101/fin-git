@@ -2,7 +2,7 @@
 .modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	z-index: 9999; /* Sit on top */
 	padding: 40px 0; /* Location of the box */ 
 	left: 0;
 	top: 0;
@@ -57,3 +57,59 @@
 }
 
 .modal-body {padding: 15px 15px;}
+
+.modd{
+	&__wrr{
+		padding: 60px;
+		position: relative;
+		// text-align: center;
+	}
+	&__title{
+		font-size: 38px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&-1{
+		.modal-content{
+			max-width: 500px;
+		}
+	}
+	&-2{
+		.modal-content{
+			max-width: 800px;
+		}
+		&__fields{
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 14px;
+			justify-content: space-between;
+			span{
+				display: inline-block;
+				margin-right: 30px;
+			}
+			.jum__calc-inp{
+				display: inline-block;
+			}
+			p{
+				margin-bottom:10px
+			}
+		}
+	}
+	&__submit{
+		margin-top: 40px;
+		margin-left: -20px;
+	}
+	&__close{
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		color: red;
+		cursor: pointer;
+		font-size: 30px;
+	}
+	&__descr{
+		text-align: center;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+}

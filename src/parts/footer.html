@@ -15,6 +15,8 @@
 		</div>
 	</div>
 	
+	<div class="mapp" id="map"></div>
+
 	<div class="footer-2 s">
 		<div class="container">
 			<div class="row">
@@ -109,8 +111,124 @@
 		</div>
 	</div>	
 	
+	<div class="modd-1 modal">
+		<div class="modal-content">
+			<div class="modd__wrr">
+				<div class="modd__close">&times;</div>	
+				<div class="modd__title">
+					Обратный звонок
+				</div>
+				<form action="" class="modd__form">
+					<div class="knoww__input-wrr">
+						<label>Имя <span class="req">*</span></label>
+						<input type="text" name="kd_name" placeholder="Игорек">
+					</div>
+					<div class="knoww__input-wrr">
+						<label>Телефон <span class="req">*</span></label>
+						<input type="text" name="kd_name" placeholder="+79999999999">
+					</div>
+					<div class="knoww__input-wrr">
+						<label>Удобное время звонка <span class="req">*</span></label>
+						<input type="text" name="kd_name" placeholder="18:00">
+					</div>
+
+					<input type="checkbox" id="k8" checked="">
+					<label for="k8"><span></span> Я принимаю <a href="#">условия передачи информации</a></label>
+					
+					<br>
+					
+					<div class="txt-cent ">
+						<button type="submit" class="butt knoww__submit modd__submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+					</div>
+
+				</form>	
+
+			</div>
+		</div>
+	</div><!-- .modd-1 -->
 
 
+	<div class="modd-2 modal">
+		<div class="modal-content">
+			<div class="modd__wrr">
+				<div class="modd__close">&times;</div>	
+				<div class="modd__title">
+					Оформление заявки на кредит
+				</div>
+				<div class="modd__descr">
+					Автокредит БН
+				</div>
+				<form action="" class="modd__form">
+					<div class="modd-2__fields">
+						<p>
+							<span>
+								СУММА КРЕДИТА (руб.)
+							</span>
+							<input type="text" class="modd-2__summ jum__calc-inp" readonly>
+						</p>
+						<p>
+							<span>
+								СРОК КРЕДИТА (ЛЕТ)
+							</span>
+							<input type="text" class="modd-2__srok jum__calc-inp" readonly>	
+						</p>
+						
+						<p>
+							<span>
+								ПРОЦЕНТНАЯ СТАВКА:
+							</span>
+							<input type="text" class="modd-2__proc jum__calc-inp" readonly>	
+						</p>
+						
+						<p>
+							<span>
+								ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ:
+							</span>
+							<input type="text" class="modd-2__platej jum__calc-inp" readonly>	
+						</p>	
+						
+
+					</div>
+					<div class="knoww__input-wrr">
+						<label>Фамилия, Имя, Отчество <span class="req">*</span></label>
+						<input type="text" name="kd_name" placeholder="Кривошлыков Игорь Анатольевич">
+					</div>	
+					
+					<div class="knoww__input-wrr-2">
+						
+						<div class="knoww__input-wrr">
+							<label>Телефон <span class="req">*</span></label>
+							<input type="text" name="kd_name" placeholder="8-999-999-99-99">
+						</div>	
+
+						<div class="knoww__input-wrr">
+							<label>Почта <span class="req">*</span></label>
+							<input type="text" name="kd_name" placeholder="ivanov@mail.ru">
+						</div>	
+
+					</div>
+
+
+					<div class="knoww__input-wrr-2">
+						
+						<div class="knoww__input-wrr-2-blck">
+							<input type="checkbox" name="" id="k7" checked>
+							<label for="k7"><span></span> Я принимаю 
+								<a href="#">условия передачи информации</a></label>	
+
+						</div>	
+						
+						<button type="submit" class="butt knoww__submit">ОТПРАВИТЬ ЗАЯВКУ</button>		
+
+					</div>
+
+				</form>	
+
+			</div>
+		</div>
+	</div><!-- .modd-2 -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH_a-4D8RrBb2znnptDLhBL_ynJt-cjDo"></script>
 	<script src="js/all.js"></script>
 	</body>
 </html>

@@ -16,12 +16,6 @@ $(document).ready(function(){
 
 			$proc.val( $proc.attr('data-default') );
 
-
-
-
-
-
-				
 			$( "#slider_summ" ).slider({
 				range: "min",
 				value: 500000,
@@ -107,7 +101,39 @@ $(document).ready(function(){
 
 
 		AddEvents: function(){
+
+			$('body').on( 'click', '.to-mod', function(e){
+				e.preventDefault();	
+
+				var targg = $(this).attr('data-targg');
+				
+				if( targg.length ){
+					
+					if( targg === '.modd-2' ){
+						var txt =	$('.button.acct').text();
+						$('.modd__descr').text( txt );
+
+						$('.modd-2__summ').val( $('#summ').val() );
+						$('.modd-2__srok').val( $('#srok').val() );
+						$('.modd-2__proc').val( $('#proc').val() );
+						$('.modd-2__platej').val( $('#platej').val() );
+					}
+					$('body').addClass('ov-hidd');
+					$( targg ).css('display','block');	
+					
+
+				}								
+			});			
+
+			$('body').on( 'click', '.modd__close', function(e){	
+				e.preventDefault();	
+				var modall = $(this).parents('.modal');
+				modall.css('display','none');
+				$('body').removeClass('ov-hidd');	
+							
+			});	
 			
+
 			$('body').on( 'click', '.reww__sliddr-imgg', function(e){
 				
 				e.preventDefault();
@@ -140,110 +166,13 @@ $(document).ready(function(){
 			$(document).on('scroll', function() {
 				
 				if($(this).scrollTop()>=$('.head').position().top + 100){
-					// var $hh = $( '.head' );
-					// $('body').css('paddingTop', $hh.attr( 'data-height' ) + 'px');
 					$( '.head' ).addClass('active');
 				}
 				else{
 					$( '.head' ).removeClass('active');
-					// $('body').css('paddingTop', '0px');
 				}
 
 			});
-
-
-			// $(window).on('scroll', function() {
-				
-			//   if( $(this).scrollTop() >= $('.sect-title-1').position().top + 500 ){
-			//      $('.sect-title-1').addClass('active'); 
-			//   }
-
-			// })
-
-
-			// $(window).on('scroll', function() {
-				
-			//    if( $(this).scrollTop() >= $('.sect-title-2').position().top + 500){
-			//      $('.sect-title-2').addClass('active'); 
-			//   }
-
-			// })
-
-
-			// $(window).on('scroll', function() {
-				
-			//   if( $(this).scrollTop() >= $('.sect-title-3').position().top + 500){
-			//      $('.sect-title-3').addClass('active'); 
-			//   }
-
-			// })
-
-			// $(window).on('scroll', function() {
-				
-			//   if( $(this).scrollTop() >= $('.sect-title-4').position().top + 500){
-			//      $('.sect-title-4').addClass('active'); 
-			//   }
-
-			// })
-
-			// $(window).on('scroll', function() {
-				
-			//    if( $(this).scrollTop() >= $('.sect-title-5').position().top + 500){
-			//      $('.sect-title-5').addClass('active'); 
-			//   }
-
-			// })
-
-			// $(window).on('scroll', function() {
-				
-			//  if( $(this).scrollTop() >= $('.sect-title-6').position().top + 500){
-			//      $('.sect-title-6').addClass('active'); 
-			//   } 
-
-			// })
-		 
-
-			 
-
-				
-
-				
-
-			 
-
-					
-
-
-			// $(window).scroll(function(){
-
-
-						
-			//   if( $(window).scrollTop() > 100 ){
-			//     var $hh = $( '.head' );
-			//     $('body').css('paddingTop', $hh.attr( 'data-height' ) + 'px');
-			//     $( '.head' ).addClass('active');
-			//   }
-			//   else{
-			//     $( '.head' ).removeClass('active');
-			//     $('body').css('paddingTop', '0px');
-			//   }
-
-			
-			// });
-
-
-			// $(window).on('load', function(){
-				// var $hd = $( '.head' );
-				// $hd.attr('data-height', $hd.outerHeight()); 
-				
-				// console.log( $hd.outerHeight(false) );	
-
-				// $('body').css('paddingTop', $hd.outerHeight(false) + 'px');
-
-			// });
-
-
-
 
 		},
 
@@ -282,9 +211,6 @@ $(document).ready(function(){
 				fade: true,
 				asNavFor: '.jum__sliddr',
 				speed: 1000,
-
-				// dots: false,
-				// appendDots: $('.jum__sliddr-dots'), 
 			});
 
 
@@ -306,6 +232,18 @@ $(document).ready(function(){
 
 		},
 		
+		mapInit: function(){
+			var mapOptions = {
+		    center: new google.maps.LatLng(45.039699, 41.968798),
+		    zoom: 17,
+			}
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+			var marker = new google.maps.Marker({
+        position: {lat: 45.039699, lng: 41.968798},
+        map: map,
+      });
+		},
 	 
 
 		// INITIALIZED
@@ -320,7 +258,7 @@ $(document).ready(function(){
 				this.calc();
 				this.loaDed();
 				this.AddEvents();
-				
+				this.mapInit();
 			}
 		} 
 	};
