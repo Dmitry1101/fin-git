@@ -23,6 +23,7 @@ body{
 	transition: opacity .3s linear;
 	position: relative;
 	color: $c-bck;
+	padding-top: 130px;
 	&.loaded{
 		opacity: 1;
 	}
@@ -31,19 +32,21 @@ body{
 .head{
 	padding-top: 40px;
 	padding-bottom: 40px;
-	// transition: all .6s ease;
 	background-color: $c-wh;				
-	
+	position: fixed;
+	z-index: 9;
+	left: 0;
+	right: 0;
+	top: 0;
+	transition: all .3s linear;
 	&.active{
-		position: fixed;
-		z-index: 9;
-		left: 0;
-		right: 0;
-		top: 0;
+		
 		padding-top: 10px;
 		padding-bottom: 10px;
 		box-shadow: 0 0 15px #cccccc;
-		animation: navAppear 0.6s;
+	
+
+		// animation: navAppear 0.6s;
 	}
 	&__itt{
 		p{
@@ -223,6 +226,41 @@ body{
 		font-size: 17px;
 		margin-top: 30px;
 		font-weight: 400;
+	}
+	&__cont{
+		&-slider{
+			.jum__titl{
+				transition: opacity 0.8s linear, transform 0.8s linear;
+				transform: translateY(-200px);
+				opacity: 0;
+			}
+
+			.butt{
+				transition: opacity 0.8s linear, transform 0.8s linear;
+				transform: translateX(200px);
+				opacity: 0;
+			}
+			.jum__lisst{
+				transition: opacity 0.8s linear, transform 0.8s linear;
+				transform: translateY(200px);
+				opacity: 0;	
+			}
+
+			.slick-active{
+				.jum__titl{
+					opacity: 1;
+					transform: translateY(0px);
+				}
+				.butt{
+					transform: translateX(0px);
+					opacity: 1;
+				}
+				.jum__lisst{
+					transform: translateY(0px);
+					opacity: 1;	
+				}
+			}	
+		}
 	}
 }//.jum
 
