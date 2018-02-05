@@ -41,12 +41,18 @@
 							<form action="" class="jum__calc-form">
 								
 								<div class="jum__calc-sel">
-									<button>Ипотека</button>
+									<a href="ipoteka.html" class="button">Ипотека</a>
+									<a href="potrebitelskiy.html" class="button ">Потребительский</a>
+									<a href="pts.html" class="button">Под залог ПТС</a>
+									<a href="biznesu.html" class="button">Для бизнеса</a>
+									<a href="avtokredit.html" class="button">Автокредит Б/У</a>
+									<a href="podzalog.html" class="button">Под залог недвиж-ти</a>
+									<!-- <button>Ипотека</button>
 									<button>Потребительский</button>
 									<button>Под залог ПТС</button>
 									<button>Для бизнеса</button>
 									<button>Автокредит Б/У</button>
-									<button>Под залог недвиж-ти</button>
+									<button>Под залог недвиж-ти</button> -->
 								</div>
 
 								<div class="jum__calc-blck">
@@ -112,7 +118,36 @@
 	</div><!-- .jum -->
 	
 	
-	@@include('parts/content.html')
+	@@include('parts/featt-1.html')
+
+	
+	@@include('parts/steppz1.html')	
+		
+	
+	@@include('parts/partnerz.html')	
+
+	
+	@@include('parts/reviewz.html')
+
+		
+
+	<div class="knoww s">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="sect-title sect-title-5">
+						Узнайте, на какую сумму кредита <br>
+						Вы можете рассчитывать
+					</div>
+					<div class="knoww__wrapp">
+						
+						@@include('parts/bottom-form-2.html')	
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 
 @@include('parts/footer.html')

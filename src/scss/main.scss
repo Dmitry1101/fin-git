@@ -233,6 +233,7 @@ body{
 			width: 100%;
 			text-align: center;
 			height: 33px;
+			border: 1px solid #ccc;
 		}
 		&-label{
 			display: block;
@@ -305,6 +306,17 @@ body{
 }
 
 .stepp{
+	&-1{
+		margin-left: 90px;
+	}
+	&-3{
+		margin-right: 90px;
+		.stepp__img{
+			&:after{
+				display: none;
+			}
+		}
+	}
 	&__img{
 		width: 113px;
 		height: 113px;
@@ -314,6 +326,16 @@ body{
 		align-items: center;
 		justify-content: center;
 		margin: 10px auto 30px;
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			// width: 100%;
+			width: 150px;
+			height: 2px;
+			background-color: $c-bl;
+			right: -190px;
+		}
 	}
 	&__inn{
 		text-align: center;
@@ -635,6 +657,59 @@ body{
 	min-height: 500px;
 	width: 100%;
 }
+
+.podzal1{
+	position: relative;
+	top: 50px;
+	&__list{
+		// text-align: right;
+		font-size: 17px;
+		text-transform: uppercase;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		padding-left: 400px;
+		justify-content: space-between;
+	}
+	&__it{
+		display: inline-block;
+		text-align: center;
+		// vertical-align: top;
+	}
+	&__txt{
+		// text-align: center;
+	}
+	&__img{
+		margin-bottom: 30px;
+	}
+}
+
+
+.pts1{
+	&__lisst{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__img{
+		margin-bottom: 15px;
+		display: flex;
+		min-height: 180px;
+		align-items: center;
+		justify-content: center;
+	}
+	&__inn{
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+
+		text-align: center;
+	}
+	&__txt{
+		margin-top: auto;
+	}
+}
+
 
 @keyframes navAppear {
   0%{

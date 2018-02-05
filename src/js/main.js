@@ -15,10 +15,12 @@ $(document).ready(function(){
 			var $proc = $('#proc');
 
 			$proc.val( $proc.attr('data-default') );
+			
+			console.log( $( "#slider_summ" ).attr('data-defValue') );
 
 			$( "#slider_summ" ).slider({
 				range: "min",
-				value: 500000,
+				value: $( "#slider_summ" ).attr('data-defValue'),
 				min: 20000,
 				max: 1000000,
 				step: 10000,
@@ -41,6 +43,10 @@ $(document).ready(function(){
 				
 				}
 			});
+
+
+			console.log( $( "#slider_summ" ).attr('data-defValue') );
+			
 
 			$( "#summ" ).val( $( "#slider_summ" ).slider( "value" ) );
 
