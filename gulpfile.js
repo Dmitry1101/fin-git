@@ -71,6 +71,7 @@ gulp.task('js', function () {
       "jquery-3.2.1.js",
       "slick.js",
       "jquery-ui.js",
+      "jquery.mask.js",
       "main.js"
     ]))
     .pipe(concat('all.js'))

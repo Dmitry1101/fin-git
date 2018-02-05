@@ -236,6 +236,8 @@ $(document).ready(function(){
 				nextArrow: $('.reww__sliddr-next'),
 			}); 
 
+			$('.kd-inp__phone').mask('+7(000)000-00-00'); 
+					
 		},
 		
 		mapInit: function(){
