@@ -697,6 +697,18 @@ body{
 		min-height: 180px;
 		align-items: center;
 		justify-content: center;
+		position: relative;
+		&:after{
+			content: "";
+			position: absolute;
+			right: -75px;
+			top: 50%;
+			width: 22px;
+			height: 22px;
+			background-color: red;
+			margin-top: -11px;
+			background: url('../img/pluss.png') center no-repeat;
+		}
 	}
 	&__inn{
 		display: flex;
@@ -704,6 +716,20 @@ body{
 		// justify-content: center;
 
 		text-align: center;
+		&:nth-child(3){
+			.pts1__img{
+				&:after{
+					background: url('../img/equall.png') center no-repeat;
+				}
+			}
+		}
+		&:last-child{
+			.pts1__img{
+				&:after{
+					display: none;
+				}
+			}
+		}
 	}
 	&__txt{
 		margin-top: auto;

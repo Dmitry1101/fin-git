@@ -45,7 +45,7 @@ $(document).ready(function(){
 			});
 
 
-			console.log( $( "#slider_summ" ).attr('data-defValue') );
+			// console.log( $( "#slider_summ" ).attr('data-defValue') );
 			
 
 			$( "#summ" ).val( $( "#slider_summ" ).slider( "value" ) );
@@ -213,7 +213,7 @@ $(document).ready(function(){
 			
 			this.$s4.slick({
 				arrows: false,
-				autoplay: true,
+				autoplay: false,
 				fade: true,
 				asNavFor: '.jum__sliddr',
 				speed: 1000,
