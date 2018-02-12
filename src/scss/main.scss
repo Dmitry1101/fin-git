@@ -133,6 +133,10 @@ body{
 
 .jum{
 	position: relative;
+	&__buttz{
+		display: flex;
+		justify-content: space-between;
+	}
 	&__sliddr{
 		&-dots{
 			position: absolute;
@@ -734,6 +738,29 @@ body{
 	&__txt{
 		margin-top: auto;
 	}
+}
+
+.mob-calc{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba( 255, 255, 255, 0.6 );
+	overflow-y: auto;
+	padding: 100px 0;
+	z-index: 99;
+	display: none;
+	animation: faddeIn 0.6s;
+}
+
+@keyframes faddeIn {
+  0%{
+  	opacity: 0;
+  }
+  100% { 	
+  	opacity: 1;
+ }
 }
 
 

@@ -9,3 +9,12 @@
 		background-color: darken( $c-bl, 10 );
 	}
 }
+
+.to-calcc{
+	display: none;
+	background-color: $c-yw;
+	color: $c-bck;
+	&:hover{
+		background-color: darken( $c-yw, 10 );
+	}
+}

@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 			$proc.val( $proc.attr('data-default') );
 			
-			console.log( $( "#slider_summ" ).attr('data-defValue') );
+			// console.log( $( "#slider_summ" ).attr('data-defValue') );
 
 			$( "#slider_summ" ).slider({
 				range: "min",
@@ -180,6 +180,28 @@ $(document).ready(function(){
 
 			});
 
+			
+			$('body').on( 'click', '.to-calcc', function(e){
+				
+				e.preventDefault();
+				
+				// $('body').addClass('ov-hidd');
+
+				$('.jum__wrr-1.jum__wrr').css('display','block');
+				
+				// $('.mob-calc').css('display','block');
+				
+				// var cloned = $('.jum__calc-wrr').clone(true);
+				// $('.jum__calc-wrr').clone(true).appendTo('.mob-calc');
+
+				
+				// $('.mob-calc').html( cloned );
+
+				// console.log( cloned );
+
+			});
+
+
 		},
 
 		setup: function(){
@@ -209,6 +231,12 @@ $(document).ready(function(){
 				appendDots: $('.jum__sliddr-dots'), 
 				asNavFor: '.jum__cont-slider',
 				speed: 1000,
+				// responsive: [
+    //       {
+    //           breakpoint: 1024,
+    //           settings: "unslick"
+    //       },
+    //      ]
 			});
 			
 			this.$s4.slick({
@@ -217,6 +245,12 @@ $(document).ready(function(){
 				fade: true,
 				asNavFor: '.jum__sliddr',
 				speed: 1000,
+				// responsive: [
+	   //      {
+	   //          breakpoint: 1024,
+	   //          settings: "unslick"
+	   //      },
+    //    ]
 			});
 
 
@@ -226,6 +260,16 @@ $(document).ready(function(){
 				autoplay: true,
 				prevArrow: $('.partt__sliddr-prev'),
 				nextArrow: $('.partt__sliddr-next'),
+				  responsive: [
+				    {
+				      breakpoint: 768,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1,
+				        // autoplay: false
+				      }
+				    }
+				  ]
 			});
 
 			this.$s3.slick({
@@ -234,6 +278,16 @@ $(document).ready(function(){
 				autoplay: true,
 				prevArrow: $('.reww__sliddr-prev'),
 				nextArrow: $('.reww__sliddr-next'),
+				responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1,
+			        // autoplay: false
+			      }
+			    }
+			  ]
 			}); 
 
 			$('.kd-inp__phone').mask('+7(000)000-00-00'); 
