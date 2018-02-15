@@ -18,3 +18,14 @@
 		background-color: darken( $c-yw, 10 );
 	}
 }
+
+.to-mapp{
+	width: 39px;
+	height: 39px;
+	border-radius: 50%;
+	background: $c-bl url('../img/marker.png') center no-repeat;
+	border: none;
+	display: none;
+	margin: 0 10px;
+	// vertical-align: middle;
+}

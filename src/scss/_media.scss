@@ -19,7 +19,52 @@
     padding-right: 10px;
 	}
 	.nav{
-		display: none;
+		&__close{
+			display: block;
+		}
+		&__wrr{
+			display: none;
+			animation: mobMenuAppear 1s;
+			padding-top: 40px;
+			&.activve{
+				position: fixed;
+				top: 0;
+				right: 0;
+				z-index: 9999;
+				display: block;
+				background-color: $c-wh;
+				box-shadow: 0 0 20px #ccc;
+				width: 100%;
+				max-width: 260px;
+				
+			}
+		}
+		&__menu{
+			
+			font-size: 14px;
+			a{
+				text-transform: none;
+				&.acct{
+					box-shadow: none;
+					background-color: $c-bl;
+					color: $c-wh;
+				}
+				&:hover{
+					box-shadow: none;
+					background-color: $c-bl;
+					color: $c-wh;	
+				}
+			}
+			li{
+				display: block;
+				text-align: left;
+				margin: 0;
+			}
+			
+		}
+	}
+	.hamburger{
+		display: inline-block;
 	}
 	.nav-sub{
 		display: none;
@@ -31,6 +76,9 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 		&__itt{
+			&-1{
+				padding-right: 10px;
+			}
 			&-2{
 				display: none;
 			}
@@ -41,7 +89,21 @@
 				display: none;
 			}
 			&-5{
-				display: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				.to-mapp{
+					display: inline-block;
+				}
+				// display: none;
+				.to-mod{
+					font-size: 0;
+					width: 39px;
+					height: 39px;
+					border-radius: 50%;
+					background: $c-bl url('../img/teleph.png') center no-repeat;
+
+				}
 			}
 
 		}
@@ -136,6 +198,34 @@
 }
 
 @media (max-width: 768px){
+	.knoww{
+		&__submit{
+			margin-left: 0;
+		}
+	}
+	.modd{
+		&__title{
+			font-size: 28px;
+		}
+		&__descr{
+			font-size: 20px;
+		}
+		&__wrr{
+			padding: 30px 20px;
+		}
+		&-2{
+			&__fields{
+				.jum__calc-inp{
+					display: block;
+				}
+			}
+		}
+	}
+	.modal{
+		&-content{
+			width: 100%;
+		}
+	}
 	.mapp{
 		min-height: 350px;
 	}

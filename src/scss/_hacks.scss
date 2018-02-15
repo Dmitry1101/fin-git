@@ -187,19 +187,21 @@ h5{
 }//END.content
 
 .hamburger{
-	border: 1px solid #fff;
-	padding: 10px 10px 3px;
-	border-radius: 4px;
+	// border: 1px solid #fff;
+	padding: 0;
+	font-size: 0;
+	border-radius: 0px;
+	display: none;
 	&-inner{
-		background-color: #fff;
-		width: 24px;
+		background-color: $c-bl;
+		width: 27px;
 		&:before{
-			background-color: #fff;
-			width: 24px;
+			background-color: $c-bl;
+			width: 27px;
 		}
 		&:after{
-			background-color: #fff;
-			width: 24px;	
+			background-color: $c-bl;
+			width: 27px;	
 		}
 	}	
 	&-box{

@@ -6,6 +6,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="nav__wrr">
+						<div class="nav__close"></div>
 						<ul class="nav__menu">
 							<li><a class="acct" href="#">Кредит</a></li>
 							<li><a href="#">Ипотека</a></li>
@@ -48,14 +49,6 @@
 									<a href="biznesu.html" class="button">Для бизнеса</a>
 									<a href="avtokredit.html" class="button">Автокредит Б/У</a>
 									<a href="podzalog.html" class="button">Под залог недвиж-ти</a>
-
-
-									<!-- <button>Ипотека</button>
-									<button class="acct">Потребительский</button>
-									<button>Под залог ПТС</button>
-									<button>Для бизнеса</button>
-									<button>Автокредит Б/У</button>
-									<button>Под залог недвиж-ти</button> -->
 								</div>
 
 								<div class="jum__calc-blck">
@@ -63,18 +56,18 @@
 								  <input class="jum__calc-inp" type="text" id="summ" readonly >
 								</div>
 								  								 
-								<div class="jum__calc-sliddr" id="slider_summ"></div>
+								<div class="jum__calc-sliddr" id="slider_summ" data-minValue="50000" data-maxValue="2000000" data-defValue="200000"></div>
 
 								<div class="jum__calc-blck">
-									<label class="jum__calc-label" for="srok">СРОК КРЕДИТА (ЛЕТ)</label>
+									<label class="jum__calc-label" for="srok">СРОК КРЕДИТА (МЕС)</label>
 								  <input class="jum__calc-inp" type="text" id="srok" readonly >
 								</div>
 								  								 
-								<div class="jum__calc-sliddr" id="slider_srok"></div>
+								<div class="jum__calc-sliddr" id="slider_srok" data-minValue="3" data-maxValue="84" data-defValue="12" data-month="1"></div>
 
 								<div class="jum__calc-blck">
 									<label class="jum__calc-label" for="proc">ПРОЦЕНТНАЯ СТАВКА:</label>
-								  <input class="jum__calc-inp" data-default="12" type="text" id="proc" readonly >
+								   <input class="jum__calc-inp" type="text" id="proc" readonly data-defValue="11.9">
 								</div>
 
 								<div class="jum__calc-blck">

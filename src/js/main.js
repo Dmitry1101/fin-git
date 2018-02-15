@@ -13,17 +13,22 @@ $(document).ready(function(){
 		calc: function(){
 
 			var $proc = $('#proc');
-
-			$proc.val( $proc.attr('data-default') );
 			
-			// console.log( $( "#slider_summ" ).attr('data-defValue') );
+			var $slider_summ = $( "#slider_summ" );
+			var $slider_srok = $( "#slider_srok" );
+			
+			var isMonth = $slider_srok.attr('data-month');
+				
+			
 
-			$( "#slider_summ" ).slider({
+			$proc.val( $proc.attr('data-defValue') );
+			
+			$slider_summ.slider({
 				range: "min",
-				value: $( "#slider_summ" ).attr('data-defValue'),
-				min: 20000,
-				max: 1000000,
-				step: 10000,
+				value: parseInt( $slider_summ.attr('data-defValue') ),
+				min: parseInt( $slider_summ.attr('data-minValue') ),
+				max: parseInt( $slider_summ.attr('data-maxValue') ),
+				
 				slide: function( event, ui ) {
 
 					$( "#summ" ).val( ui.value );
@@ -31,7 +36,10 @@ $(document).ready(function(){
 					var srok, platej, procent;
 
 					srok = $('#srok').val();
-					srok = srok * 12;
+					
+					if( isMonth == undefined ){
+						srok = srok * 12;
+					}
 
 					platej = ui.value / srok;  
 
@@ -45,7 +53,6 @@ $(document).ready(function(){
 			});
 
 
-			// console.log( $( "#slider_summ" ).attr('data-defValue') );
 			
 
 			$( "#summ" ).val( $( "#slider_summ" ).slider( "value" ) );
@@ -53,11 +60,11 @@ $(document).ready(function(){
 
 
 
-			$( "#slider_srok" ).slider({
+			$slider_srok.slider({
 				range: "min",
-				value: 10,
-				min: 1,
-				max: 30,
+				value: parseInt( $slider_srok.attr('data-defValue') ),
+				min: parseInt( $slider_srok.attr('data-minValue') ),
+				max: parseInt( $slider_srok.attr('data-maxValue') ),
 				step: 1,
 				slide: function( event, ui ) {
 					
@@ -66,7 +73,10 @@ $(document).ready(function(){
 					var srok, platej, procent;
 
 					srok = $('#srok').val();
-					srok = srok * 12;
+					
+					if( isMonth == undefined ){
+						srok = srok * 12;
+					}
 
 					platej = $('#summ').val() / srok;  
 
@@ -89,7 +99,14 @@ $(document).ready(function(){
 					var srok, platej, procent;
 
 					srok = $('#srok').val();
-					srok = srok * 12;
+					
+					// var isMonth = $( "#slider_srok" ).attr('data-month');
+					// alert();
+					// console.log( isMonth );	
+					
+					if( isMonth === undefined ){
+						srok = srok * 12;
+					}
 
 					platej = $('#summ').val() / srok;  
 
@@ -200,7 +217,30 @@ $(document).ready(function(){
 				// console.log( cloned );
 
 			});
+			
 
+			$('body').on( 'click', '.hamburger', function(e){
+				e.preventDefault();
+				$(this).toggleClass('is-active');
+				$('.nav__wrr').addClass('activve');
+			});
+
+
+			$('body').on( 'click', '.nav__close', function(e){
+				e.preventDefault();
+				$('.hamburger').toggleClass('is-active');
+				$('.nav__wrr').removeClass('activve');
+			});
+
+
+			$('body').on( 'click', '.to-mapp', function(e){
+				e.preventDefault();
+				 $('html,body').animate({
+	          scrollTop: $('#map').offset().top - 80
+	       }, 1000);
+			});
+
+			
 
 		},
 

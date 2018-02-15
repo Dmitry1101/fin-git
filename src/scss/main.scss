@@ -1,3 +1,4 @@
+@import "hamburgers"; 
 @import "bootstrap"; 
 @import "fonts";
 @import "vars"; 
@@ -7,7 +8,7 @@
 @import "menu";  
 @import "hacks"; 
 @import "slick"; 
-@import "hamburgers"; 
+
 @import "jquery-ui"; 
 
 
@@ -34,7 +35,7 @@ body{
 	padding-bottom: 40px;
 	background-color: $c-wh;				
 	position: fixed;
-	z-index: 9;
+	z-index: 9999;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -59,7 +60,7 @@ body{
 				transform: translateY(-50%);
 			}
 		}
-
+		
 		&-2{
 			// padding-left: 30px;
 		}
@@ -81,7 +82,7 @@ body{
 	}
 	&__wrr{
 		display: flex;
-		flex-wrap: wrap;
+		// flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 	}
@@ -128,6 +129,16 @@ body{
 				padding: 15px 10px;
 			}
 		}
+	}
+	&__close{
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		background: url('../img/menu-close.png') center no-repeat;
+		cursor: pointer;
+		display: none;
 	}
 }
 
@@ -787,6 +798,20 @@ body{
   	transform: scale(1, 1);
  }
 }
+
+@keyframes mobMenuAppear {
+  0%{
+  	opacity: 0;
+  	transform: translateX(100px);
+  }
+  100% { 	
+  	opacity: 1;
+  	transform: translateX(0px);
+ }
+}
+
+
+
 
 
 // @keyframes showTitle {
