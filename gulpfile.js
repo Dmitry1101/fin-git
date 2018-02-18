@@ -72,6 +72,7 @@ gulp.task('js', function () {
       "slick.js",
       "jquery-ui.js",
       "jquery.mask.js",
+      "jquery.ui.touch-punch.min.js",
       "main.js"
     ]))
     .pipe(concat('all.js'))

@@ -1,5 +1,19 @@
 $(document).ready(function(){
 	
+	function calculatorChangg( isMonth ){
+
+		var time, platej, procent, rate;
+		time = $('#srok').val();
+		if( isMonth === undefined ){
+			time = time * 12;
+		}
+		platej = $('#summ').val();
+		procent = $('#proc').val() / 1200;					
+		var rate = platej * ( procent * Math.pow(1 + procent, time)) / (Math.pow(1 + procent, time) - 1);
+		$('#platej').val( Math.round( rate ) );  
+
+	}
+
 	var Alll = {
 
 		$b: $('body'),
@@ -28,36 +42,18 @@ $(document).ready(function(){
 				value: parseInt( $slider_summ.attr('data-defValue') ),
 				min: parseInt( $slider_summ.attr('data-minValue') ),
 				max: parseInt( $slider_summ.attr('data-maxValue') ),
-				
+				step: 1000,
 				slide: function( event, ui ) {
 
 					$( "#summ" ).val( ui.value );
 
-					var srok, platej, procent;
-
-					srok = $('#srok').val();
-					
-					if( isMonth == undefined ){
-						srok = srok * 12;
-					}
-
-					platej = ui.value / srok;  
-
-					procent = $('#proc').val();
-
-					platej = platej + ( platej / 100 * procent );         
-
-					$('#platej').val( Math.round( platej )  );
+					calculatorChangg( isMonth );
 				
 				}
 			});
-
-
 			
 
 			$( "#summ" ).val( $( "#slider_summ" ).slider( "value" ) );
-
-
 
 
 			$slider_srok.slider({
@@ -70,21 +66,7 @@ $(document).ready(function(){
 					
 					$( "#srok" ).val( ui.value );
 
-					var srok, platej, procent;
-
-					srok = $('#srok').val();
-					
-					if( isMonth == undefined ){
-						srok = srok * 12;
-					}
-
-					platej = $('#summ').val() / srok;  
-
-					procent = $('#proc').val();
-
-					platej = platej + ( platej / 100 * procent );         
-
-					$('#platej').val( Math.round( platej )  );
+					calculatorChangg( isMonth );
 
 				}
 			});
@@ -92,38 +74,18 @@ $(document).ready(function(){
 			$( "#srok" ).val( $( "#slider_srok" ).slider( "value" ) );
 
 
+			calculatorChangg( isMonth );
 
-
-			( function(){
-
-					var srok, platej, procent;
-
-					srok = $('#srok').val();
-					
-					// var isMonth = $( "#slider_srok" ).attr('data-month');
-					// alert();
-					// console.log( isMonth );	
-					
-					if( isMonth === undefined ){
-						srok = srok * 12;
-					}
-
-					platej = $('#summ').val() / srok;  
-
-					procent = $('#proc').val();
-
-					platej = platej + ( platej / 100 * procent );         
-					
-
-					$('#platej').val( Math.round( platej )  );        
-
-			} )();
-
+			$('body').on('change', '#summ', function() {
+			 calculatorChangg( isMonth );
+			});
 
 		},
 
 
 		AddEvents: function(){
+			
+			
 
 			$('body').on( 'click', '.to-mod', function(e){
 				e.preventDefault();	
@@ -147,6 +109,8 @@ $(document).ready(function(){
 
 				}								
 			});			
+
+
 
 			$('body').on( 'click', '.modd__close', function(e){	
 				e.preventDefault();	
@@ -201,20 +165,18 @@ $(document).ready(function(){
 			$('body').on( 'click', '.to-calcc', function(e){
 				
 				e.preventDefault();
-				
-				// $('body').addClass('ov-hidd');
+				$('body').addClass('ov-hidd');
+				var $caalc = $('.jum__wrr-1.jum__wrr');
+				var $wrapp = $('.mob-calc');
 
-				$('.jum__wrr-1.jum__wrr').css('display','block');
+				$wrapp.css('display','block');
+				$caalc.appendTo( '.mob-calc' );
+				$caalc.css('display','block')
 				
-				// $('.mob-calc').css('display','block');
+				// $('.jum__wrr-1.jum__wrr').clone( true, true ).appendTo('.stepp')
 				
-				// var cloned = $('.jum__calc-wrr').clone(true);
-				// $('.jum__calc-wrr').clone(true).appendTo('.mob-calc');
+				// $('.jum__wrr-1.jum__wrr').css('display','block');
 
-				
-				// $('.mob-calc').html( cloned );
-
-				// console.log( cloned );
 
 			});
 			
@@ -232,8 +194,15 @@ $(document).ready(function(){
 				$('.nav__wrr').removeClass('activve');
 			});
 
+			$('body').on( 'click', '.mob-calc__cloz', function(e){
+				e.preventDefault();
+				$('body').removeClass('ov-hidd');
+				$('.mob-calc').css('display', 'none');
+			});
 
-			$('body').on( 'click', '.to-mapp', function(e){
+			
+
+			$('body').on( 'click', '.go-to-map', function(e){
 				e.preventDefault();
 				 $('html,body').animate({
 	          scrollTop: $('#map').offset().top - 80
@@ -248,8 +217,8 @@ $(document).ready(function(){
 
 			var arr = ['sprite','main']; 
 			
-			// if( window.location.hostname.indexOf("v.cf") !== -1 ){
-			if( window.location.hostname.indexOf("loc") !== -1 ){  
+			if( window.location.hostname.indexOf("v.cf") !== -1 ){
+			// if( window.location.hostname.indexOf("loc") !== -1 ){  
 				arr.forEach( function(s) { 
 					var link = document.createElement('link');
 					link.rel = 'stylesheet';
@@ -352,8 +321,8 @@ $(document).ready(function(){
 		init: function(){
 			this.setup();  
 
-			// var locHost = window.location.hostname.indexOf("v.cf");      
-			var locHost = window.location.hostname.indexOf("loc");      
+			var locHost = window.location.hostname.indexOf("v.cf");      
+			// var locHost = window.location.hostname.indexOf("loc");      
 
 			
 			if( locHost !== -1 ){
